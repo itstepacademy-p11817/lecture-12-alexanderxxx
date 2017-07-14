@@ -1,46 +1,44 @@
 ﻿#include <iostream>
 #include <stdlib.h>
-using namespace std;
 
 int main()
 {
 	setlocale(0, "");
-	double v, col, t1=7.0, t2= 4.5, t3=6.0, t4=1.7, summ=0, s, vir=0;
+	double v=0.0, col=0.0, t1=7.0, t2= 4.5, t3=6.0, t4=1.7, summ=0.0, s=0.0, vir=0.0;
 
-	int qwe = 9;
-	while (qwe != 0)
+	while (t1 != 0)
 	{
-		cout << "Общая выручка: " << vir << '\n' << '\n' << "товары: " << '\n' << "1 - Водка" << '\n' << "2 - Пиво" << '\n' << "3 - Вино" << '\n' << "4 - Сигареты" << '\n' << "5 - чек" << '\n' << "0 - Выход" << '\n';
-		cin >> v;
+		std::cout << "Общая выручка: " << vir << '\n' << '\n' << "товары: " << '\n' << "1 - Водка" << '\n' << "2 - Пиво" << '\n' << "3 - Вино" << '\n' << "4 - Сигареты" << '\n' << "5 - чек" << '\n' << "0 - Выход" << '\n';
+		std::cin >> v;
 		if (v!=0 && v<5)
 		{ 
-			cout << "количество: ";
-			cin >> col;
+			std::cout << "количество: ";
+			std::cin >> col;
 		}
 		if (v == 1)
-			summ = summ + t1*col;
+			summ += t1*col;
 		else if (v == 2)
-			summ = summ + t2*col;
+			summ += t2*col;
 		else if (v == 3)
-			summ = summ + t3*col;
+			summ += t3*col;
 		else if (v == 4)
-			summ = summ + t4*col;
+			summ += t4*col;
 		else if (v == 5)
 		{
-			cout << "Скидка (%): ";
-			cin >> s;
+			std::cout << "Скидка (%): ";
+			std::cin >> s;
 			if (s != 0)
 			{
 				summ = summ - (summ*s / 100);
 			}
-			cout << "К оплате: " << summ << '\n';
+			std::cout << "К оплате: " << summ << '\n';
 			vir = vir + summ;
 			summ = 0;
 		}
 		else if (v == 0)
 			return 0;
 		else
-			cout << "Введена какая то херня" << '\n';
+			std::cout << "Введена какая то херня" << '\n';
 
 	}
 		

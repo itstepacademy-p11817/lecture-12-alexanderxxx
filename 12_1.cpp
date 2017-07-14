@@ -1,21 +1,19 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <stdlib.h>
-using namespace std;
 
 int main()
 {
 	setlocale(0, "");
-	int d1, d2, x;
-	cout << "ãðàíèöû äèàïàçîíà:" << '\n';
-	cin >> d1;
-	cin >> d2;
-	int qwe = 9;
-	while (qwe!=0)
+	int d1=0, d2=0, x=0;
+	std::cout << "Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñ‹ Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ð°:" << '\n';
+	std::cin >> d1;
+	std::cin >> d2;
+	while (d2!=0)
 	{ 
-		cout << "÷èñëî:";
-		cin >> x;
+		std::cout << "Ñ‡Ð¸ÑÐ»Ð¾:";
+		std::cin >> x;
 		if (x< d1 || x>d2)
-			cout << "÷èñëî íå âõîäèò â äèàïàçîí" << '\n';
+			cout << "Ñ‡Ð¸ÑÐ»Ð¾ Ð½Ðµ Ð²Ñ…Ð¾Ð´Ð¸Ñ‚ Ð² Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½" << '\n';
 		else
 			return 0;
 	}
